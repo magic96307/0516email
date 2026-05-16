@@ -1,0 +1,20 @@
+name = "temp-mail-worker"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+workers_dev = true
+account_id = "f4cef4cbabd101746d0b0176058f20d1"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-mail-db"
+database_id = "eea7128b-dcec-4ef1-a66d-9b169930b62c"
+
+[triggers]
+crons = ["0 3 * * *"]
+
+[vars]
+# 允许跨域的前端地址（先填占位符，部署完 Vercel 后回来改）
+ALLOWED_ORIGINS = "http://localhost:3000"
+# 管理员密码（自己设一个强密码）
+ADMIN_PASSWORD = "6625922"
